@@ -42,17 +42,150 @@
 </header>
 
 <main>
-  <section class="hero" id="home">
-    <div class="container">
-      <!-- Photo: save as photos/profile.jpg, then remove the comment markers -->
-      <!-- <img class="profile-photo" src="photos/profile.jpg" alt="Nur Mohammad" /> -->
-      <p class="hero__hello">Hello, I'm</p>
-      <h1>Nur Mohammad</h1>
-      <p class="hero__role">Remote Sensing &bull; GIScience &bull; Cartography &bull; Environmental Change Monitoring</p>
-      <a class="button" href="doc/CV_Nur_Mohammad.pdf" target="_blank" rel="noopener">Download CV</a>
-      <a class="button button--ghost" href="#contact">Contact me</a>
+  <section
+  class="hero"
+  id="home"
+  style="
+    align-items: flex-start;
+    padding-top: calc(var(--header) + 35px);
+  "
+>
+  <div
+    class="container"
+    style="width: 100%;"
+  >
+    <div
+      style="
+        width: 100%;
+        max-width: 500px;
+        padding: 30px;
+        border-radius: 26px;
+        background: #ffffff;
+        color: #111111;
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+      "
+    >
+      <!-- Greeting and name -->
+      <h1
+        style="
+          margin: 0 0 12px;
+          font-size: clamp(30px, 5vw, 40px);
+          line-height: 1.15;
+          font-weight: 700;
+          text-shadow: none;
+        "
+      >
+        Hello,<br>
+        I'm <span style="color: #285943;">Nur Mohammad</span>
+      </h1>
+
+      <!-- Research areas -->
+      <p
+        style="
+          margin-bottom: 26px;
+          font-size: 14px;
+          line-height: 1.6;
+        "
+      >
+        Remote Sensing | GIScience | Cartography
+      </p>
+
+      <!-- Main research focus -->
+      <h2
+        style="
+          margin-bottom: 18px;
+          font-size: clamp(23px, 4vw, 29px);
+          line-height: 1.25;
+          font-weight: 700;
+        "
+      >
+        Human–Environment Interactions<br>
+        &amp; Environmental Change
+      </h2>
+
+      <!-- CV and email -->
+      <div
+        style="
+          display: flex;
+          align-items: center;
+          flex-wrap: wrap;
+          gap: 16px;
+          margin-bottom: 22px;
+        "
+      >
+        <a
+          href="doc/CV_Nur_Mohammad.pdf"
+          target="_blank"
+          rel="noopener"
+          style="
+            display: inline-block;
+            padding: 10px 24px;
+            border-radius: 5px;
+            background: #285943;
+            color: #ffffff;
+            font-size: 14px;
+            font-weight: 600;
+            text-decoration: none;
+          "
+        >
+          Curriculum vitae
+        </a>
+
+        <a
+          href="mailto:nmohammadnurbd@gmail.com"
+          aria-label="Email Nur Mohammad"
+          title="Email Nur Mohammad"
+          style="
+            display: inline-flex;
+            align-items: center;
+            color: #111111;
+            text-decoration: none;
+          "
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="28"
+            height="28"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <rect
+              x="3"
+              y="5"
+              width="18"
+              height="14"
+              rx="1"
+            ></rect>
+            <path d="m3 6 9 7 9-7"></path>
+          </svg>
+        </a>
+      </div>
+
+      <!-- Portrait -->
+      <img
+        src="photos/nur.jpeg"
+        alt="Portrait of Nur Mohammad"
+        width="280"
+        height="280"
+        style="
+          display: block;
+          width: min(280px, 100%);
+          height: auto;
+          aspect-ratio: 1 / 1;
+          margin: 0 auto;
+          object-fit: cover;
+          object-position: center;
+          border-radius: 45% 55% 48% 52% / 40% 42% 58% 60%;
+        "
+      >
     </div>
-  </section>
+  </div>
+</section>
 
   <section class="section container" id="about">
     <h2 class="section__title">About me</h2>
