@@ -447,32 +447,42 @@ p {
 /* PlantVision experience photos */
 #experience .plantvision-gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
-  gap: 16px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
+  gap: clamp(12px, 2vw, 20px);
+  width: 100%;
+  max-width: 100%;
   margin-top: 20px;
+  box-sizing: border-box;
 }
 
 #experience .plantvision-gallery__item {
   display: block;
+  width: 100%;
   min-width: 0;
+  margin: 0;
   overflow: hidden;
   border-radius: 12px;
-  background: #f2f5f3;
+  text-decoration: none;
+  box-sizing: border-box;
 }
 
+/* Display the whole photo without cropping or stretching */
 #experience .plantvision-gallery__item img {
   display: block;
   width: 100%;
+  max-width: 100%;
   height: auto;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
-  transition: transform 0.25s ease;
+  max-height: none;
+  aspect-ratio: auto;
+  object-fit: contain;
+  border-radius: inherit;
+  transform: none;
 }
 
-@media (hover: hover) {
-  #experience .plantvision-gallery__item:hover img {
-    transform: scale(1.03);
-  }
+/* Override the previous hover zoom */
+#experience .plantvision-gallery__item:hover img {
+  transform: none;
 }
 
 #experience .plantvision-gallery__item:focus-visible {
@@ -480,14 +490,16 @@ p {
   outline-offset: 4px;
 }
 
-@media (max-width: 640px) {
-  #experience .plantvision-gallery {
-    grid-template-columns: 1fr;
-  }
+/* A single photo uses the full available width */
+#experience .plantvision-gallery__item:only-child {
+  grid-column: 1 / -1;
 }
 
-@media (prefers-reduced-motion: reduce) {
-  #experience .plantvision-gallery__item img {
-    transition: none;
+/* Mobile: stack photos vertically */
+@media (max-width: 640px) {
+  #experience .plantvision-gallery {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 14px;
+    margin-top: 16px;
   }
 }
