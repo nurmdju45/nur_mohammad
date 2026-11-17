@@ -503,3 +503,44 @@ p {
     margin-top: 16px;
   }
 }
+
+
+/* PlantVision responsibilities subtitle */
+#experience .plantvision-responsibilities-title {
+  margin: 18px 0 10px;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 700;
+  font-style: italic;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  line-height: 1.5;
+  color: inherit;
+}
+
+/* PlantVision responsibilities bullet points */
+#experience .plantvision-responsibilities {
+  display: block;
+  margin: 0 0 20px;
+  padding-left: 1.4rem;
+  list-style-type: disc;
+  line-height: 1.75;
+  color: inherit;
+}
+
+#experience .plantvision-responsibilities li {
+  display: list-item;
+  margin-bottom: 10px;
+  padding-left: 4px;
+}
+
+#experience .plantvision-responsibilities li:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 640px) {
+  #experience .plantvision-responsibilities {
+    padding-left: 1.2rem;
+    line-height: 1.65;
+  }
+}
