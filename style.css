@@ -544,53 +544,106 @@ p {
 }
 
 
-/* Experience responsibilities heading */
-#experience h5.experience-responsibilities-title {
-  margin: 18px 0 12px;
+/* CEGIS: division and project information */
+#experience .cegis-division {
+  margin: 14px 0 10px;
+  line-height: 1.7;
+}
+
+#experience .cegis-project {
+  margin: 8px 0;
+  line-height: 1.7;
+}
+
+/* Bold, italic and underlined labels */
+#experience .cegis-label,
+#experience h5.cegis-projects-title,
+#experience h5.cegis-responsibilities-title {
   font-family: inherit;
   font-size: 1rem;
   font-weight: 700 !important;
   font-style: italic !important;
   text-decoration: underline !important;
-  text-decoration-thickness: 1px;
   text-underline-offset: 4px;
+  text-decoration-thickness: 1px;
+  color: inherit;
+}
+
+#experience h5.cegis-projects-title,
+#experience h5.cegis-responsibilities-title {
+  display: block;
+  margin: 18px 0 10px;
   line-height: 1.5;
-  color: inherit;
 }
 
-/* Experience responsibilities bullet list */
-#experience ul.experience-responsibilities {
+/* Numbered project list */
+#experience ol.cegis-projects {
   display: block !important;
-  list-style: disc outside !important;
-  margin: 0 0 20px !important;
-  padding: 0 0 0 24px !important;
-  overflow: visible;
-  color: inherit;
+  list-style: decimal outside !important;
+  margin: 0 0 16px !important;
+  padding: 0 0 0 26px !important;
 }
 
-#experience ul.experience-responsibilities > li {
+#experience ol.cegis-projects > li {
   display: list-item !important;
-  list-style: disc outside !important;
-  margin: 0 0 10px !important;
-  padding: 0 0 0 4px !important;
+  list-style: decimal outside !important;
+  margin: 0 0 8px !important;
+  padding-left: 4px;
   line-height: 1.7;
 }
 
-#experience ul.experience-responsibilities > li::marker {
-  color: currentColor;
-  font-size: 1em;
+/* Responsibilities: custom visible bullet markers */
+#experience ul.cegis-responsibilities {
+  display: block !important;
+  list-style: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
 }
 
-#experience ul.experience-responsibilities > li:last-child {
+#experience ul.cegis-responsibilities > li {
+  display: block !important;
+  position: relative;
+  list-style: none !important;
+  margin: 0 0 10px !important;
+  padding: 0 0 0 22px !important;
+  line-height: 1.7;
+}
+
+/* Draw the bullet independently of native list styling */
+#experience ul.cegis-responsibilities > li::before {
+  content: "\2022" !important;
+  display: block !important;
+  position: absolute;
+  top: 0;
+  left: 2px;
+  width: 12px;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  background: none;
+  border: 0;
+  font-size: 1.2em;
+  font-weight: 700;
+  line-height: inherit;
+  color: currentColor;
+}
+
+/* Prevent duplicate native markers */
+#experience ul.cegis-responsibilities > li::marker {
+  content: "";
+}
+
+#experience ul.cegis-responsibilities > li:last-child {
   margin-bottom: 0 !important;
 }
 
 @media (max-width: 640px) {
-  #experience ul.experience-responsibilities {
+  #experience ul.cegis-responsibilities > li {
     padding-left: 20px !important;
+    line-height: 1.65;
   }
 
-  #experience ul.experience-responsibilities > li {
-    line-height: 1.65;
+  #experience ol.cegis-projects {
+    padding-left: 22px !important;
   }
 }
