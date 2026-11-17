@@ -542,3 +542,55 @@ p {
 #experience ul.plantvision-responsibilities > li:last-child {
   margin-bottom: 0 !important;
 }
+
+
+/* Experience responsibilities heading */
+#experience h5.experience-responsibilities-title {
+  margin: 18px 0 12px;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 700 !important;
+  font-style: italic !important;
+  text-decoration: underline !important;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+  line-height: 1.5;
+  color: inherit;
+}
+
+/* Experience responsibilities bullet list */
+#experience ul.experience-responsibilities {
+  display: block !important;
+  list-style: disc outside !important;
+  margin: 0 0 20px !important;
+  padding: 0 0 0 24px !important;
+  overflow: visible;
+  color: inherit;
+}
+
+#experience ul.experience-responsibilities > li {
+  display: list-item !important;
+  list-style: disc outside !important;
+  margin: 0 0 10px !important;
+  padding: 0 0 0 4px !important;
+  line-height: 1.7;
+}
+
+#experience ul.experience-responsibilities > li::marker {
+  color: currentColor;
+  font-size: 1em;
+}
+
+#experience ul.experience-responsibilities > li:last-child {
+  margin-bottom: 0 !important;
+}
+
+@media (max-width: 640px) {
+  #experience ul.experience-responsibilities {
+    padding-left: 20px !important;
+  }
+
+  #experience ul.experience-responsibilities > li {
+    line-height: 1.65;
+  }
+}
