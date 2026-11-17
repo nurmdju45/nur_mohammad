@@ -647,3 +647,84 @@ p {
     padding-left: 22px !important;
   }
 }
+
+
+
+/* Skills section layout */
+#skills .skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  width: 100%;
+}
+
+/* Keep cards within their grid columns */
+#skills .skills-grid > .card {
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+/* Category headings */
+#skills .skills-grid .card h3 {
+  margin: 0 0 16px;
+  font-size: 1.05rem;
+  line-height: 1.5;
+}
+
+/* Skill tags */
+#skills .chips {
+  display: flex !important;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 8px;
+  margin: 0 !important;
+  padding: 0 !important;
+  list-style: none !important;
+}
+
+#skills .chips > li {
+  display: block !important;
+  max-width: 100%;
+  margin: 0 !important;
+  padding: 7px 11px;
+  border: 1px solid rgba(45, 80, 60, 0.18);
+  border-radius: 10px;
+  background: rgba(235, 243, 237, 0.85);
+  color: inherit;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  list-style: none !important;
+  box-sizing: border-box;
+}
+
+/* Prevent inherited list decorations */
+#skills .chips > li::before,
+#skills .chips > li::after {
+  content: none !important;
+}
+
+#skills .chips > li::marker {
+  content: "";
+}
+
+/* Tablet */
+@media (max-width: 1000px) {
+  #skills .skills-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  #skills .skills-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 16px;
+  }
+
+  #skills .chips > li {
+    font-size: 0.85rem;
+    padding: 6px 10px;
+  }
+}
